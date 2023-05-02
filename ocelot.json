@@ -1,0 +1,31 @@
+{
+    "GlobalConfiguration": {
+      "BaseUrl": "http://localhost:63092"
+    },
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/FirstDivisionTeams",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5147
+          }
+        ],
+        "UpstreamPathTemplate": "/firstDivision",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/SecondDivisionTeams",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5092
+          }
+        ],
+        "UpstreamPathTemplate": "/secondDivision",
+        "UpstreamHttpMethod": [ "Get" ]
+      }
+    ]
+  }
